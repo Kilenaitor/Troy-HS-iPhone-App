@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppStoreFileSize</key>
+	<integer>1079830</integer>
+	<key>AppStoreFileSizeValid</key>
+	<true/>
+	<key>ApplicationProperties</key>
+	<dict>
+		<key>ApplicationPath</key>
+		<string>Applications/Troy High.app</string>
+		<key>CFBundleIdentifier</key>
+		<string>Troy-High.Troy-High</string>
+		<key>CFBundleShortVersionString</key>
+		<string>1.0</string>
+		<key>CFBundleVersion</key>
+		<string>1.0</string>
+		<key>IconPaths</key>
+		<array>
+			<string>Applications/Troy High.app/Scaled - Edit.png</string>
+			<string>Applications/Troy High.app/Small - Icon.png</string>
+		</array>
+		<key>SigningIdentity</key>
+		<string>iPhone Developer: Scott Minshall (WZ3P6SLS3P)</string>
+	</dict>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>CreationDate</key>
+	<date>2013-03-19T02:02:30Z</date>
+	<key>Name</key>
+	<string>Troy High</string>
+	<key>SchemeName</key>
+	<string>Troy High</string>
+</dict>
+</plist>

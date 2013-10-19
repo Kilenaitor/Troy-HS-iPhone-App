@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+    <dependencies>
+        <deployment version="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - News-->
+        <scene sceneID="x3L-ZG-9xE">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="YVn-6W-w6Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="news.png" id="xk1-Al-eCT"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mjz-ni-vFW">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
+                        <color key="tintColor" red="0.70949388589999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="gOZ-dq-1nO">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="3KY-mU-yOh" kind="relationship" relationship="rootViewController" id="YRz-Vo-TED"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0oa-ZP-3sY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="-915"/>
+        </scene>
+        <!--First View Controller - News-->
+        <scene sceneID="axi-N3-kGU">
+            <objects>
+                <tableViewController id="3KY-mU-yOh" customClass="FirstViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="mNp-EX-gum">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Announcements" rowHeight="100" id="4ew-kS-ucf">
+                                <rect key="frame" x="0.0" y="22" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="MkC-YV-n9o" kind="push" identifier="AnnouncementView" id="UES-a0-Z2F"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3KY-mU-yOh" id="o0g-Lm-ZiD"/>
+                            <outlet property="delegate" destination="3KY-mU-yOh" id="bE4-Xh-bXL"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="News" id="zoD-vn-ilq"/>
+                    <connections>
+                        <outlet property="myNews" destination="mNp-EX-gum" id="VV7-Bd-qbv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bK-PV-Zpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="-915"/>
+        </scene>
+        <!--Second View Controller - About-->
+        <scene sceneID="E8E-tm-zK7">
+            <objects>
+                <tableViewController id="WsV-0u-5Do" customClass="SecondViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="Uxz-cM-RbG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Info Tabs" id="Cyc-1l-Aed">
+                                <rect key="frame" x="0.0" y="22" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="bDk-Pc-0Ic" kind="push" identifier="Map" id="8XD-Xg-s2Z"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WsV-0u-5Do" id="hAQ-A5-sZx"/>
+                            <outlet property="delegate" destination="WsV-0u-5Do" id="dT1-RI-44t"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="About" id="NXN-1e-8ja"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <segue destination="g0Y-pG-HrN" kind="push" identifier="Food" id="d0z-fI-ML3"/>
+                        <segue destination="SH8-FR-A7b" kind="push" identifier="Attendence" id="P31-kQ-RWb"/>
+                        <segue destination="30b-Yk-FcI" kind="push" identifier="ESLR" id="1RU-ul-ZzS"/>
+                        <segue destination="dud-NQ-Hmp" kind="push" identifier="Principal" id="Mim-tT-So3"/>
+                        <segue destination="N42-hJ-Oxs" kind="push" identifier="Vision" id="mud-Ha-GBq"/>
+                        <segue destination="M01-9F-P3k" kind="push" identifier="Bell" id="BTj-yC-uIj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xi0-h1-KTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="-168"/>
+        </scene>
+        <!--Bell Schedule - Bell Schedules-->
+        <scene sceneID="Lx9-Ns-IRy">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="M01-9F-P3k" customClass="BellSchedule" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EJK-JI-JGT">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="TopLeft" id="WcJ-hH-hdO">
+                                <rect key="frame" x="-9" y="-9" width="338" height="381"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bell Schedules" id="O49-9X-dqB"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="WcJ-hH-hdO" id="LaG-Af-eVa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szy-7P-TYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2393" y="-822"/>
+        </scene>
+        <!--Map View - Campus Map-->
+        <scene sceneID="sxW-Xw-Kqc">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="bDk-Pc-0Ic" customClass="MapView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="krm-Eg-cfE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="TopLeft" scalesPageToFit="YES" id="74o-ia-syS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Campus Map" id="lmY-eG-qYw"/>
+                    <connections>
+                        <outlet property="webView" destination="74o-ia-syS" id="uME-ba-lQO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WoB-Q2-4MF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="-168"/>
+        </scene>
+        <!--Attendence - Attendence-->
+        <scene sceneID="lnk-Tr-rP9">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="SH8-FR-A7b" customClass="Attendence" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i3C-Kb-mad">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="TopLeft" scalesPageToFit="YES" id="wqM-OJ-cHo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Attendence" id="iYX-82-3Rm"/>
+                    <connections>
+                        <outlet property="webView" destination="wqM-OJ-cHo" id="kV3-9m-QdC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJL-az-wzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2393" y="-168"/>
+        </scene>
+        <!--View Controller - ELSR's-->
+        <scene sceneID="zMa-TZ-jah">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="30b-Yk-FcI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2KQ-zK-mnx">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" minimumZoomScale="2" maximumZoomScale="5" editable="NO" usesAttributedText="YES" id="fcS-Ym-zrH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Graduates of Troy High School will be:
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="1) Good Citizens who">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Demonstrate a respect for and an acceptance of differences between people and cultures
+Contribute their talents to improve the quality of life in their school, local and global communities
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="17"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Demonstrate honesty and integrity in their work
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" headIndent="17"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="2) Critical Thinkers who">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Apply problem-solving processes to real-life situations
+Analyze, interpret and evaluate concepts in a variety of contexts
+Use resources effectively in pursuit of a given goal
+Apply the appropriate technology to solve problems
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="17"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="3) Effective Communicators who">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" paragraphSpacingBefore="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" paragraphSpacingBefore="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Work collaboratively with others with diverse experiences and backgrounds
+Are able to convey and interpret messages using a variety of media
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="17"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="4) Life-long Learners who">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" paragraphSpacingBefore="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" paragraphSpacingBefore="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Establish informed, responsible personal and professional goals
+Identify and acquire the skills necessary for the attainment of their goals
+Appreciate and explore the fine and performing arts
+Learn about and use new technology
+Understand the importance of health consciousness and apply it to their everyday lives</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ELSR's" id="ugE-Bn-Hn9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgU-6j-dCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2871" y="-168"/>
+        </scene>
+        <!--View Controller - Vision Statement-->
+        <scene sceneID="XDD-NR-JqJ">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="N42-hJ-Oxs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zU4-RI-BRb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="FYR-P1-xMZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Troy High School seeks to provide both a comprehensive liberal arts educational program and a specialized program of study for students of all abilities and backgrounds. At each stage of their development and in each pathway of study, students are being shaped into critical thinkers, effective communicators, good citizens, and lifelong learners. As such, they are encouraged to articulate and pursue a personal and professional vision for their own futures. Troy's educational community is committed to helping its students actualize these visions.</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vision Statement" id="LYP-ho-UuK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kuu-4f-eOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3303" y="-168"/>
+        </scene>
+        <!--Lunch View - Lunch Menu-->
+        <scene sceneID="co1-FQ-Jmd">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="g0Y-pG-HrN" customClass="LunchView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5DC-oM-TJF">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="aEL-uP-RSW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView hidden="YES" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="P68-zh-0Sw">
+                                <rect key="frame" x="290" y="4" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lunch Menu" id="4mt-GB-OuY"/>
+                    <connections>
+                        <outlet property="indicator" destination="P68-zh-0Sw" id="6dj-lO-8p5"/>
+                        <outlet property="webView" destination="aEL-uP-RSW" id="cJY-h7-lmk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dC-rO-I57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="494"/>
+        </scene>
+        <!--View Controller - Principal's Message-->
+        <scene sceneID="DoQ-fv-d7b">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="dud-NQ-Hmp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="InS-Xf-2YD">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="qGw-Ii-mT3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Dear Friends,
+ 
+ 
+
+As we approach the end of the fall semester I am reminded at how fast the school year seems to go, especially as we move into the spring semester. The “testing season” will soon be here. Starting in March we begin the mandated tests for all students. The testing schedule for 2013 begins with the California High School Exit Exam (CAHSEE) on March 12th and 13th; Student Testing And Reporting (STAR) testing dates are April 22nd – May 10th, Advanced Placement (AP) testing dates are May 6th –May 17th , and International Baccalaureate (IB) test dates are May 2nd – May 22nd. 
+
+ 
+ 
+
+We would like to ask for your support as our students enter the season of “high stakes” testing. Successful performance on these tests will help students qualify for graduation, earn entrance into college, and be awarded advanced standing in college. The Academic Performance Index (API), Newsweek and OC Register rankings that are used for school comparisons are based on multiple assessments that include: California Standards Tests, California High School Exit Exam, Advanced Placement and International Baccalaureate tests. 
+
+ 
+ 
+
+We recognize that this is an incredibly stressful time for our students, staff and families. It will be helpful to ensure that your student is getting proper nutrition and rest. Both should be seen as vital to student achievement. Proper nutrition should be seen as very important because it fuels our body's systems everyday. When the body is working efficiently, stress levels will be lessened and student performance enhanced. 
+
+ 
+ 
+
+Please encourage your student to work hard on every test and perform to their best ability. Successful performances on these mandated tests will not only improve our students’ opportunities to achieve their goals for post-secondary education and future careers but will also improve the schools overall Academic Performance Indicator ranking. 
+
+ 
+ 
+
+Finally, I would like to take this opportunity to introduce the future of testing in the United States. The new Common Core State Standards (CCSS) define the knowledge, concepts, and skills students should acquire at each grade level. The CCSS were developed through a state-led initiative to establish consistent, clear education standards across the nation. The standards are research-based and internationally benchmarked—i.e., they are informed by the practices of academically high-achieving nations around the world. Since 2010, 45 states have adopted the same standards. The CCSS are designed to prepare students for success in college and careers not only in the nation, but in the competitive global economy. The class of 2016 will be the first class to take the CCSS tests in lieu of STAR. 
+
+ 
+
+Sincerely,
+
+Margaret Buchan
+Principal</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Principal's Message" id="Uoy-d1-dpk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7iP-WE-w3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2871" y="494"/>
+        </scene>
+        <!--Navigation Controller - Info-->
+        <scene sceneID="ILu-Sw-q1W">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="fvk-Jh-Jbl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info2.png" id="JId-CR-pX3"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rD3-am-50W">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.71051290759999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WsV-0u-5Do" kind="relationship" relationship="rootViewController" id="uky-db-9Ou"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0U3-4R-AqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="-168"/>
+        </scene>
+        <!--Announcement View-->
+        <scene sceneID="qzg-13-fKU">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="MkC-YV-n9o" customClass="AnnouncementView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bdz-fh-OLG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="24D-cB-lYA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MkC-YV-n9o" id="h5t-DX-WXD"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView hidden="YES" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="OgN-0s-DlN">
+                                <rect key="frame" x="295" y="7" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9zs-A7-dkb"/>
+                    <connections>
+                        <outlet property="active" destination="OgN-0s-DlN" id="fe5-v9-1ZZ"/>
+                        <outlet property="webView" destination="24D-cB-lYA" id="PHf-sZ-mc7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UlL-0U-yQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1455" y="-915"/>
+        </scene>
+        <!--Third View Controller - Aries-->
+        <scene sceneID="uGX-0V-C4g">
+            <objects>
+                <viewController title="Aries" id="Lkf-4g-1vn" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kdz-Fl-cpi">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="ZNl-vN-vNW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                            <view alpha="0.50000000000000011" contentMode="scaleToFill" id="7De-o2-QGU">
+                                <rect key="frame" x="0.0" y="-3" width="320" height="370"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" id="Goh-Te-6xv">
+                                        <rect key="frame" x="142" y="166" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="1hX-6i-NYW">
+                                <rect key="frame" x="0.0" y="367" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jlJ-ig-1VZ"/>
+                                    <barButtonItem image="Back.png" style="plain" id="9vd-i0-kvt">
+                                        <inset key="imageInsets" minX="9" minY="3" maxX="0.0" maxY="3"/>
+                                        <connections>
+                                            <action selector="goBack" destination="ZNl-vN-vNW" id="i3v-32-70F"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="12" style="plain" systemItem="fixedSpace" id="dJh-rN-teT"/>
+                                    <barButtonItem image="Forward.png" style="plain" id="5kl-eh-v2P">
+                                        <inset key="imageInsets" minX="0.0" minY="3" maxX="9" maxY="3"/>
+                                        <connections>
+                                            <action selector="goForward" destination="ZNl-vN-vNW" id="phM-Ku-ivJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8rb-Kx-qfd"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Aeries" image="abi.png" id="s3Y-U7-fV6"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <connections>
+                        <outlet property="bar" destination="1hX-6i-NYW" id="3Nt-6E-GHr"/>
+                        <outlet property="indicator" destination="Goh-Te-6xv" id="yjd-pw-KNL"/>
+                        <outlet property="loadView" destination="7De-o2-QGU" id="9hk-wJ-5u3"/>
+                        <outlet property="myWebView" destination="ZNl-vN-vNW" id="NVW-fv-caU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GxH-w4-ylV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="1329"/>
+        </scene>
+        <!--Fourth View Controller - Classes-->
+        <scene sceneID="2oJ-2H-uil">
+            <objects>
+                <viewController id="u60-ra-qqd" customClass="FourthViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="trq-ja-zEh">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" id="a6Z-My-JRS">
+                                <rect key="frame" x="0.0" y="44" width="320" height="372"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <view alpha="0.50000000000000011" contentMode="scaleToFill" id="73a-cG-9MI">
+                                <rect key="frame" x="0.0" y="44" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <activityIndicatorView contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="Llk-Dg-b77">
+                                        <rect key="frame" x="142" y="165" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <activityIndicatorView hidden="YES" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="Psp-Su-aYv">
+                                <rect key="frame" x="293" y="40" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="W7e-b3-mRo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.70949388589999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Classes" id="DMe-iU-m2r">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="dp6-LW-n6K">
+                                            <connections>
+                                                <action selector="goBack" destination="a6Z-My-JRS" id="Mq4-QZ-Qmv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Teachers" id="v7E-Vt-t8X">
+                                            <connections>
+                                                <action selector="button:" destination="u60-ra-qqd" id="oVY-A2-hTN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Classes" image="classes.png" id="k5d-Uk-Qot"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <connections>
+                        <outlet property="_myButton" destination="v7E-Vt-t8X" id="lby-e4-sVP"/>
+                        <outlet property="aView" destination="73a-cG-9MI" id="FKx-VX-N2K"/>
+                        <outlet property="classesWebView" destination="a6Z-My-JRS" id="HTs-7f-Woo"/>
+                        <outlet property="preView" destination="Llk-Dg-b77" id="TkK-fC-lOh"/>
+                        <outlet property="switchView" destination="Psp-Su-aYv" id="ZRR-tJ-nY0"/>
+                        <outlet property="topView" destination="trq-ja-zEh" id="yWf-2t-SoK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GWa-FC-N8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="638"/>
+        </scene>
+        <!--Tab Bar Controller - Troy High-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController title="Troy High" id="4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fLO-uY-bfF"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YVn-6W-w6Z" kind="relationship" relationship="viewControllers" id="9f7-CC-ovG"/>
+                        <segue destination="fvk-Jh-Jbl" kind="relationship" relationship="viewControllers" id="J7x-BR-SsK"/>
+                        <segue destination="u60-ra-qqd" kind="relationship" relationship="viewControllers" id="C3M-c0-q27"/>
+                        <segue destination="Lkf-4g-1vn" kind="relationship" relationship="viewControllers" id="IZw-Qf-d4d"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154" y="220"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back.png" width="25" height="25"/>
+        <image name="Forward.png" width="25" height="25"/>
+        <image name="abi.png" width="30" height="30"/>
+        <image name="classes.png" width="30" height="30"/>
+        <image name="info2.png" width="30" height="30"/>
+        <image name="news.png" width="30" height="30"/>
+    </resources>
+    <classes>
+        <class className="AnnouncementView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnnouncementView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="_webView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="active" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="Attendence" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Attendence.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="BellSchedule" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BellSchedule.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="FirstViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="aView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="myNews" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="FourthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FourthViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="button:"/>
+                <relationship kind="outlet" name="_myButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="aView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="bar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="classesWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="preView" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="switchView" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="topView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="LunchView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LunchView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="indicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="MapView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="SecondViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
+        </class>
+        <class className="ThirdViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ThirdViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="indicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="loadView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="myWebView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
