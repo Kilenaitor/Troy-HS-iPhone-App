@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class Principal;
+
 @interface SecondViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *cellData;
+@property Principal *PrincipalView;
 
 @end

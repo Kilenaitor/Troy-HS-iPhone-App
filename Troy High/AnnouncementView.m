@@ -20,16 +20,34 @@
 @synthesize request;
 @synthesize active = indicator;
 
+@synthesize title = title_;
+@synthesize url = url_;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSURL *url = [NSURL URLWithString:[request stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]]; //Setting the inital webpage to the classes page for the link
+    
+    NSRange match;
+    match = [request rangeOfString: @"pdf"];
+    
+    NSURL *url;
+    
+    if(match.location == NSNotFound)
+    {
+        url = [NSURL URLWithString:[request stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]]; //Setting thewebpage to the classes page for the link
+    }
+    else
+    {
+        url = [NSURL URLWithString:request]; //Setting the  webpage to the classes page for the link
+    }
 
     NSURLRequest *classRequest = [NSURLRequest requestWithURL:url]; //Convertin the NSURL to a NSURLRequest
     
     [myWebView loadRequest:classRequest]; //Calling the request for the WebKit to load the NSURL
+    
+    NSLog(@"Requested Link: %@", classRequest);
 }
 
 
@@ -47,6 +65,8 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *) webview //Used to check and see when to stop animating and showing the acitivity indicator spinner
 {
+    webview.scalesPageToFit=YES;
+    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [indicator stopAnimating];
     [indicator setOpaque:false];

@@ -11,9 +11,7 @@
 @interface ThirdViewController : UIViewController
 {
     IBOutlet UIWebView *myWebView;
-    IBOutlet UIView *loadView;
     IBOutlet UIActivityIndicatorView *indicator;
-    IBOutlet UIToolbar *bar;
 }
 
 @end

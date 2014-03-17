@@ -10,16 +10,11 @@
 
 @interface FourthViewController : UIViewController
 {
-    IBOutlet UIView *topView;
     IBOutlet UIWebView *classesWebView;
-    IBOutlet UINavigationBar *bar;
-    IBOutlet UIBarButtonItem * _myButton;
-    IBOutlet UIView *aView;
-    IBOutlet UIActivityIndicatorView *preView;
     IBOutlet UIActivityIndicatorView *switchView;
-    
 }
+@property (nonatomic,retain) IBOutlet UISegmentedControl *segmentedControl;
 
--(IBAction)button:(id)sender;
+-(IBAction) segmentedControlIndexChanged;
 
 @end

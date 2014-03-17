@@ -12,14 +12,8 @@
 
 @interface FirstViewController : UITableViewController
 {
-    IBOutlet UITableView *myNews;
-    
-    IBOutlet UIView *aView;
-    
-    IBOutlet UIActivityIndicatorView *activityIndicator;
-    
-
-//    CGSize cellSize;
+    IBOutlet UITableView *myNews;    
+    //    CGSize cellSize;
     
     NSXMLParser * rssParser;
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5051" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <deployment version="1536" defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <deployment version="1536" defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - News-->
@@ -84,11 +84,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QFf-CJ-IFg">
-                                <rect key="frame" x="0.0" y="86" width="320" height="60"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Info" rowHeight="100" id="QFf-CJ-IFg">
+                                <rect key="frame" x="0.0" y="86" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QFf-CJ-IFg" id="Af7-A8-KKc">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -365,8 +365,8 @@ Understand the importance of health consciousness and apply it to their everyday
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Troy High School seeks to provide both a comprehensive liberal arts educational program and a specialized program of study for students of all abilities and backgrounds. At each stage of their development and in each pathway of study, students are being shaped into critical thinkers, effective communicators, good citizens, and lifelong learners. As such, they are encouraged to articulate and pursue a personal and professional vision for their own futures. Troy's educational community is committed to helping its students actualize these visions.</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <mutableString key="text">Troy High School seeks to provide both a comprehensive liberal arts educational program and a specialized program of study for students of all abilities and backgrounds. At each stage of their development and in each pathway of study, students are being shaped into critical thinkers, effective communicators, good citizens, and lifelong learners. As such, they are encouraged to articulate and pursue a personal and professional vision for their own futures. Troy's educational community is committed to helping its students actualize these visions.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -380,10 +380,10 @@ Understand the importance of health consciousness and apply it to their everyday
             </objects>
             <point key="canvasLocation" x="3303" y="-168"/>
         </scene>
-        <!--View Controller - Principal's Message-->
+        <!--Principal - Principal's Message-->
         <scene sceneID="DoQ-fv-d7b">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" id="dud-NQ-Hmp" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" id="dud-NQ-Hmp" customClass="Principal" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VDc-3F-V7O"/>
                         <viewControllerLayoutGuide type="bottom" id="fnl-Kh-BpE"/>
@@ -392,36 +392,25 @@ Understand the importance of health consciousness and apply it to their everyday
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGw-Ii-mT3">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3q-nn-0uT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Welcome to Troy High School!
-
-It is my sincere pleasure to serve you as the principal of Troy this year. I have had a wonderful summer getting to know our staff members, our students, and our families. I can already tell that this will be an amazing year.
-
-We are celebrating the 50th anniversary of Troy's first graduating class this spring. I hope that you will all join us for an exciting year of celebratory events - from athletic contests to performing arts productions, from Back to School Night to Open House. 
-
-I am looking forward to seeing you all this Monday, August 12 as we kick off the 2013-14 school year.
-
-All the best,
-Dr. Amy Avina </string>
-                                        <attributes>
-                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SdE-VI-Ssk">
+                                <rect key="frame" x="293" y="7" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Principal's Message" id="Uoy-d1-dpk"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="active" destination="SdE-VI-Ssk" id="zNv-fV-hlF"/>
+                        <outlet property="site" destination="H3q-nn-0uT" id="VYb-Dn-Grh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7iP-WE-w3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,6 +505,7 @@ Dr. Amy Avina </string>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Aeries" image="abi.png" id="s3Y-U7-fV6"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="indicator" destination="5cS-gD-02Z" id="bR6-7Y-DgS"/>
                         <outlet property="myWebView" destination="jFb-O0-4NT" id="0IT-6N-nOS"/>
@@ -551,23 +541,29 @@ Dr. Amy Avina </string>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Classes" id="Bd4-Xc-1Ip">
+                    <navigationItem key="navigationItem" id="Bd4-Xc-1Ip">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Back" id="dp6-LW-n6K">
                             <color key="tintColor" red="0.71051290759999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="goBack" destination="a6Z-My-JRS" id="Mq4-QZ-Qmv"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Teachers" id="v7E-Vt-t8X">
-                            <color key="tintColor" red="0.71051290759999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="9hN-xC-rmx">
+                            <rect key="frame" x="92" y="7" width="137" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Classes"/>
+                                <segment title="Teachers"/>
+                            </segments>
                             <connections>
-                                <action selector="button:" destination="u60-ra-qqd" id="oVY-A2-hTN"/>
+                                <action selector="segmentedControlIndexChanged" destination="u60-ra-qqd" eventType="valueChanged" id="i8d-4D-6Yr"/>
                             </connections>
-                        </barButtonItem>
+                        </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="_myButton" destination="v7E-Vt-t8X" id="lby-e4-sVP"/>
                         <outlet property="classesWebView" destination="a6Z-My-JRS" id="HTs-7f-Woo"/>
+                        <outlet property="segmentedControl" destination="9hN-xC-rmx" id="7xn-cU-ZPs"/>
                         <outlet property="switchView" destination="Psp-Su-aYv" id="ZRR-tJ-nY0"/>
                     </connections>
                 </viewController>

@@ -7,7 +7,6 @@
 //
 
 #import "ThirdViewController.h"
-#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
 @interface ThirdViewController ()
 
@@ -19,12 +18,11 @@
 {
     [super viewDidLoad];
     
-    [myWebView addSubview:loadView]; //Adds the webview to the subview
     [indicator startAnimating]; //Starts the activity indicator
     
     [myWebView setDelegate:(id)self];
     
-    NSURL *url = [NSURL URLWithString:@"https://mystudent.fjuhsd.net/Parent/m/parents#/"]; //Loads the Aeries website
+    NSURL *url = [NSURL URLWithString:@"https://mystudent.fjuhsd.net/Parent/LoginParent.aspx?page=default.aspx"]; //Loads the Aeries website
     
     NSURLRequest *myRequest = [NSURLRequest requestWithURL:url]; //Converts to URL request
     
@@ -37,15 +35,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void) webViewDidFinishLoad:(UIWebView *) webView
 {
     [indicator stopAnimating]; //Stops it from animating
     [indicator removeFromSuperview];
+
+    myWebView.scrollView.scrollEnabled = YES;
     
-    if (!SYSTEM_VERSION_LESS_THAN(@"7.0")) {
-        myWebView.scrollView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
-    }
-    myWebView.scrollView.scrollEnabled = NO;
+    webView.scalesPageToFit=YES;
 }
 
 @end

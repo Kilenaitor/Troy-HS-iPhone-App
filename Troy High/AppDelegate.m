@@ -29,6 +29,9 @@
         //tabController.tabBarController.tabBar.selectedImageTintColor = [UIColor redColor];
         [[UITabBar appearance] setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
     }
+    NSDictionary *dictionary = @{ @"UserAgent" : @"Safari iOS 7 - iPhone"};
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
+    
     [window addSubview:rootController.view];
     [window makeKeyAndVisible];
     return YES;

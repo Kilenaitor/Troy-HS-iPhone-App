@@ -10,12 +10,13 @@
 
 @interface FourthViewController ()
 {
-    bool *state; //Managing the State of the UITabBarButton for the Classes/Teachers Tab
+    //bool *state; //Managing the State of the UITabBarButton for the Classes/Teachers Tab
 }
 
 @end
 
 @implementation FourthViewController
+@synthesize segmentedControl;
 
 - (void)viewDidLoad
 {
@@ -23,7 +24,7 @@
     
     classesWebView.delegate = (id)self; //Sets the delegate to self so that it loads
         
-    state = true; //Setting inital state of the variable
+    //state = true; //Setting inital state of the variable
 
     NSURL *class = [NSURL URLWithString:@"http://www.troyhigh.com/apps/classes/"]; //Setting the inital webpage to the classes page for the link
     
@@ -44,36 +45,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
--(void)button: (id)sender //Used to instruct what happens when the button is selected. 1) Load the request 2)Change the title name of the button
+-(void)segmentedControlIndexChanged
 {
+    NSURL *teachers = [NSURL URLWithString:@"http://www.troyhigh.com/apps/staff/"]; //Loads the Staff page
+    NSURLRequest *teacherRequest = [NSURLRequest requestWithURL:teachers]; //Reinitiates the request
     
-    if(state) //Checks what state the button is in 
-    {
-        
-        NSURL *teachers = [NSURL URLWithString:@"http://www.troyhigh.com/apps/staff/"]; //Loads the Staff page
-        
-        NSURLRequest *teacherRequest = [NSURLRequest requestWithURL:teachers]; //Reinitiates the request
-    
-        [classesWebView loadRequest:teacherRequest]; //Loads the request
-    
-        [sender setTitle:@"Classes"]; //Sender is the button; changes it's title to Departments
-        
-        state = !state; //Flips the state
-    }
-    else
-    {
-    
-        NSURL *class = [NSURL URLWithString:@"http://www.troyhigh.com/apps/classes/"]; //Loads the Classes page
-        
-        NSURLRequest *classRequest = [NSURLRequest requestWithURL:class]; //Creates the request
-        
-        [classesWebView loadRequest:classRequest]; //Loads the request
-        
-        [sender setTitle:@"Teachers"]; //Changes the title
-        
-        state = !state; //Swaps the state
+    NSURL *class = [NSURL URLWithString:@"http://www.troyhigh.com/apps/classes/"]; //Loads the Classes page
+    NSURLRequest *classRequest = [NSURLRequest requestWithURL:class]; //Creates the request
+
+
+    switch (self.segmentedControl.selectedSegmentIndex) {
+        case 0:
+            [classesWebView loadRequest:classRequest]; //Loads the request
+            break;
+        case 1:
+            [classesWebView loadRequest:teacherRequest]; //Loads the request
+            break;
+        default:
+            break;
     }
 }
 
@@ -107,13 +96,8 @@
         [switchView stopAnimating];
         [switchView setOpaque:false];
     //}
-}
-
--(void)webViewDidFailLoadWithError:(UIWebView *) webview
-{
-    [preView stopAnimating];
-    [preView setOpaque:NO];
-    [aView removeFromSuperview];
+    
+    webview.scalesPageToFit=YES;
 }
 
 

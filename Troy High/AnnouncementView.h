@@ -25,4 +25,7 @@
 @property UIActivityIndicatorView *active;
 @property (nonatomic, strong) NSString *mime;
 
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *url;
+
 @end

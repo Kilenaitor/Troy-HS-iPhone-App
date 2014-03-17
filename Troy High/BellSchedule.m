@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Bells" ofType:@"pdf"]; //Loads the PDf for the bell schedule
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"BellsN" ofType:@"pdf"]; //Loads the PDf for the bell schedule
     NSURL *url = [NSURL fileURLWithPath:path];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
